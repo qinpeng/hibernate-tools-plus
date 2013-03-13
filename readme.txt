@@ -1,22 +1,39 @@
-Hibernate Tools
+Hibernate Tools Plug
 ===============
-Version: 4.0.0, February 2012
+For hibernate 4
 
 What is it
 ----------
 
-The tools for Hibernate provides various tools to use with Hibernate.
-The primary tools can be used for generating source artifacts such as
-mapping files, java entities, DAO and other scaffolding code.  The
-source of this generation can be JDBC database, classes or even just
-existing mappings.
+Hibernate Tools Plus	( Based on hibernate-tools )
 
-It uses Hibernate core metamodel to generate from and to the source
-artifacts. Allowing it to support both top-down, bottom-up and
-middle-out development.
+1, support Chinese comment in table column, and add comment to Pojo
+2, auto generate FieldNamesEnum， easy to enum Pojo filed
+3, auto generate enum for char type in Pojo, 
 
-Hibernate Tools is used in JBoss Tools Hibernate plugins to provide
-parts of the Eclipse plugins for Hibernate. 
+
+eg 1, 
+if you have comments in db table column: 
+private String intro; // 公司介绍.
+private String description; // 描述.
+private String requirement; // 要求.
+
+eg 2, 
+public static enum FieldNamesEnum {
+	intro, description, requirement;
+}
+
+eg 3,
+you have status filed of char:
+private char status; 
+
+and you have comment on this column in db table:
+ENUM(A,B,C). Status Filed，A-auto, B-below, C-close. 
+
+and Tool Plus will auto generate enum type, 
+public static enum status {
+	A, B, C;
+}
 
 Licensing
 ---------
@@ -25,11 +42,8 @@ This software is distributed under the terms of the FSF Lesser Gnu Public
 License (see lgpl.txt). This product includes software developed by the Apache
 Software Foundation (http://www.apache.org/). 
 
-Hibernate Tools URLs
---------------------
 
-Home Page:        http://tools.hibernate.org | http://jboss.org/tools
-Downloads:        http://jboss.org/tools/download
-Mailing lists:    http://www.hibernate.org/community/mailinglists.html
-Source Code:      https://github.com/hibernate/hibernate-tools/
-Issue Tracking:   http://opensource.atlassian.com/projects/hibernate/browse/HBX
+Thanks
+--------------------
+Thanks for the original hibernate-tools team, 
+
