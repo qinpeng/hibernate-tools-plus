@@ -14,7 +14,7 @@ Hibernate Tools Plus	( Based on hibernate-tools )
 
 eg 1, 
 if you have comments in db table column: 
-private String intro; // 公司介绍.
+private String intro; // 介绍.
 private String description; // 描述.
 private String requirement; // 要求.
 
