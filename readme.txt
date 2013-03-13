@@ -4,7 +4,6 @@ For hibernate 4
 
 What is it
 ----------
-
 Hibernate Tools Plus	( Based on hibernate-tools )
 
 1, support Chinese comment in table column, and add comment to Pojo
@@ -35,15 +34,16 @@ public static enum status {
 	A, B, C;
 }
 
+Thanks
+--------------------
+Thanks for the original hibernate-tools team
+
 Licensing
 ---------
-
 This software is distributed under the terms of the FSF Lesser Gnu Public
 License (see lgpl.txt). This product includes software developed by the Apache
 Software Foundation (http://www.apache.org/). 
 
 
-Thanks
---------------------
-Thanks for the original hibernate-tools team, 
+
 
