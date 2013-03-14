@@ -21,6 +21,10 @@ ${pojo.getPackageDeclaration()}
 </#if>
 <#include "PojoExtraClassCode.ftl"/>
 
+<#include "PlusPojoCharFieldEnum.ftl"/>
+
+<#include "PlusPojoFieldNamesEnum.ftl"/>
+
 }
 </#assign>
 
