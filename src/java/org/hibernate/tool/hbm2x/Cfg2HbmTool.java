@@ -351,7 +351,8 @@ public class Cfg2HbmTool {
 		}
 		if (!isPrimaryKeyColumn) {
 			if (!column.isNullable() ) {
-				sb.append("not-null=\"true\" ");
+//				sb.append("not-null=\"true\" ");
+				//@pqin
 			}
 			if (column.isUnique() ) {
 				sb.append("unique=\"true\" ");

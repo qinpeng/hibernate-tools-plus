@@ -59,24 +59,30 @@ public final class JDBCToHibernateTypeHelper {
    /* (non-Javadoc)
  * @see org.hibernate.cfg.JDBCTypeToHibernateTypesStrategy#getPreferredHibernateType(int, int, int, int)
  */
+   // @pqin
    public static String getPreferredHibernateType(int sqlType, int size, int precision, int scale, boolean nullable, boolean generatedIdentifier) {
 	   boolean returnNullable = nullable || generatedIdentifier;
 	if ( (sqlType == Types.DECIMAL || sqlType == Types.NUMERIC) && scale <= 0) { // <= 
 		   if (precision == 1) {
 			   // NUMERIC(1) is a often used idiom for storing boolean thus providing it out of the box.
-			   return returnNullable?Boolean.class.getName():"boolean";
+//			   return returnNullable?Boolean.class.getName():"boolean";
+			   return Boolean.class.getName();
 		   }
 		   else if (precision < 3) {
-			   return returnNullable?Byte.class.getName():"byte";
+//			   return returnNullable?Byte.class.getName():"byte";
+			   return Byte.class.getName();
 		   }
 		   else if (precision < 5) {
-			   return returnNullable?Short.class.getName():"short";
+//			   return returnNullable?Short.class.getName():"short";
+			   return Short.class.getName();
 		   }
 		   else if (precision < 10) {
-			   return returnNullable?Integer.class.getName():"int";
+//			   return returnNullable?Integer.class.getName():"int";
+			   return Integer.class.getName();
 		   }
 		   else if (precision < 19) {
-			   return returnNullable?Long.class.getName():"long";
+//			   return returnNullable?Long.class.getName():"long";
+			   return Long.class.getName();
 		   }
 		   else {
 			   return "big_decimal";
