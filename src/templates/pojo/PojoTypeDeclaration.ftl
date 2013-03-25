@@ -1,2 +1,2 @@
 <#include "Ejb3TypeDeclaration.ftl"/>
-${pojo.getClassModifiers()} ${pojo.getDeclarationType()} ${pojo.getDeclarationName()} ${pojo.getExtendsDeclaration()} extends Model
+${pojo.getClassModifiers()} ${pojo.getDeclarationType()} ${pojo.getDeclarationName()} ${pojo.getExtendsDeclaration()} extends Model<${pojo.getDeclarationName()}>
